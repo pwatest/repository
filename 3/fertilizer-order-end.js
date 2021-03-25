@@ -673,7 +673,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // 戻る
-$("#fertilizer-order-end-botton-back").on("click", function (e) {
+$("#fertilizer-order-end-button-back").on("click", function (e) {
     window.location.href = './fertilizer-order-list.html';
 });
 
