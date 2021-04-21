@@ -1212,6 +1212,7 @@ fertilizerOrder.fetchCategoryList(function (json) {
             return data.filter(function (row) {
                 if (row.CategoryName.indexOf(text) >= 0) return true;
                 var result = false;
+                if (row.ProductGroupList == undefined) return false; // オフラインの場合は json でこのリストを手間だったで設定していないため return する。
                 row.ProductGroupList.forEach(function (productGroup) {
                     result = result || productGroup.ProductGroupName.indexOf(text) >= 0 || productGroup.OverView.indexOf(text) >= 0;
                 });
